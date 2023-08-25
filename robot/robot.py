@@ -4,7 +4,7 @@ from gtts import gTTS
 import playsound
 
 # Set up your OpenAI API key
-openai.api_key = "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"
+openai.api_key = "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"
 
 def get_voice_command():
     recognizer = sr.Recognizer()

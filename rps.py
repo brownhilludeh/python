@@ -5,23 +5,23 @@ name = input('Enter your name : ')
 
 def get_user_choice():
     while True:
-        user_choice = input("Choose rock, paper, or scissors: ").lower()
-        if user_choice in ["rock", "paper", "scissors"]:
+        user_choice = input("Choose r for rock, p for paper, or s for scissors: ").lower()
+        if user_choice in ["r", "p", "s"]:
             return user_choice
         else:
             print("Invalid choice. Please choose rock, paper, or scissors.")
 
 
 def get_computer_choice():
-    return random.choice(["rock", "paper", "scissors"])
+    return random.choice(["r", "p", "scissors"])
 
 
 def determine_winner(user_choice, computer_choice):
     if user_choice == computer_choice:
         return "It's a tie!"
-    elif (user_choice == "rock" and computer_choice == "scissors") or \
-         (user_choice == "paper" and computer_choice == "rock") or \
-         (user_choice == "scissors" and computer_choice == "paper"):
+    elif (user_choice == "r" and computer_choice == "scissors") or \
+         (user_choice == "p" and computer_choice == "r") or \
+         (user_choice == "scissors" and computer_choice == "p"):
         return "You won!"
     else:
         return "Computer won!"
